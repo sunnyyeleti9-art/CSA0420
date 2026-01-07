@@ -1,0 +1,116 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMW5aMNDzZ4zQ7PYUk5ZpZg",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/sunnyyeleti9-art/CSA0420/blob/main/ITA0625\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vlH5SHrwoLHF",
+        "outputId": "3d01c3b7-df98-44ad-dad0-d9f9f3e3a5e6"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a) Marks array: [78 85 92 66 74 88 90 69 81 95]\n",
+            "Shape: (10,)\n",
+            "Data type: int64\n",
+            "\n",
+            "b) Array: [ 10  20  30  40  50  60  70  80  90 100]\n",
+            "First element: 10\n",
+            "Last element: 100\n",
+            "Elements from index 2 to 6: [30 40 50 60 70]\n",
+            "\n",
+            "c) Array 1: [1 2 3 4 5]\n",
+            "Array 2: [ 6  7  8  9 10]\n",
+            "Element-wise addition: [ 7  9 11 13 15]\n",
+            "Element-wise multiplication: [ 6 14 24 36 50]\n",
+            "\n",
+            "d) Original array: [23 45 67 89 12 54 76 38]\n",
+            "Mask (values > 50): [False False  True  True False  True  True False]\n",
+            "Values greater than 50: [67 89 54 76]\n",
+            "\n",
+            "e) Original array: [ 1  2  3  4  5  6  7  8  9 10 11 12]\n",
+            "Reshaped 3×4 array:\n",
+            " [[ 1  2  3  4]\n",
+            " [ 5  6  7  8]\n",
+            " [ 9 10 11 12]]\n"
+          ]
+        }
+      ],
+      "source": [
+        "import numpy as np\n",
+        "\n",
+        "# a. Create a NumPy array containing marks of 10 students\n",
+        "marks = np.array([78, 85, 92, 66, 74, 88, 90, 69, 81, 95])\n",
+        "print(\"a) Marks array:\", marks)\n",
+        "print(\"Shape:\", marks.shape)\n",
+        "print(\"Data type:\", marks.dtype)\n",
+        "print()\n",
+        "\n",
+        "# b. NumPy array from 10 to 100 with step size 10\n",
+        "arr = np.arange(10, 101, 10)\n",
+        "print(\"b) Array:\", arr)\n",
+        "print(\"First element:\", arr[0])\n",
+        "print(\"Last element:\", arr[-1])\n",
+        "print(\"Elements from index 2 to 6:\", arr[2:7])\n",
+        "print()\n",
+        "\n",
+        "# c. Element-wise addition and multiplication\n",
+        "arr1 = np.array([1, 2, 3, 4, 5])\n",
+        "arr2 = np.array([6, 7, 8, 9, 10])\n",
+        "\n",
+        "print(\"c) Array 1:\", arr1)\n",
+        "print(\"Array 2:\", arr2)\n",
+        "print(\"Element-wise addition:\", arr1 + arr2)\n",
+        "print(\"Element-wise multiplication:\", arr1 * arr2)\n",
+        "print()\n",
+        "\n",
+        "# d. Mask values greater than 50\n",
+        "values = np.array([23, 45, 67, 89, 12, 54, 76, 38])\n",
+        "mask = values > 50\n",
+        "\n",
+        "print(\"d) Original array:\", values)\n",
+        "print(\"Mask (values > 50):\", mask)\n",
+        "print(\"Values greater than 50:\", values[mask])\n",
+        "print()\n",
+        "\n",
+        "# e. Reshape array into 3×4 matrix\n",
+        "arr_reshape = np.arange(1, 13)\n",
+        "reshaped = arr_reshape.reshape(3, 4)\n",
+        "\n",
+        "print(\"e) Original array:\", arr_reshape)\n",
+        "print(\"Reshaped 3×4 array:\\n\", reshaped)\n"
+      ]
+    }
+  ]
+}
